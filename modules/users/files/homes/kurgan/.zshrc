@@ -59,6 +59,7 @@ vi() {
 alias sudo='command sudo '
 alias machinespuppetisees='sudo /opt/scripts/puppet/machines_puppetisees.sh'
 alias hostpuppetise='sudo /opt/scripts/puppet/hostpuppetise.sh'
+alias gitpush='git push -u origin master'
 
 # Environment variables
 export GIT_EDITOR=vi
