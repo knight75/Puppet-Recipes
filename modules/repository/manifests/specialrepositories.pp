@@ -5,7 +5,7 @@ class repository::specialrepositories {
                 ensure => present
             }
 
-            file {"/etc/apt/sources.list.d/virtualbox":
+            file {"/etc/apt/sources.list.d/virtualbox.list":
                  ensure => present,
                  content => template("repository/virtualbox.erb"),
                  notify => Exec["refresh_apt"],
@@ -14,6 +14,6 @@ class repository::specialrepositories {
 
             exec {"refresh_apt":
                  command => "apt-get update",
-                 subscribe   => File["/etc/apt/sources.list.d/virtualbox"] 
+                 subscribe   => File["/etc/apt/sources.list.d/virtualbox.list"] 
             }
 }
