@@ -1,5 +1,4 @@
 
-
 class common::paquets::install {
         package {"zsh":
                 ensure => installed
@@ -25,4 +24,7 @@ class common::paquets::install {
                 ensure => installed
         }
 
+        package {"lsb-release":
+                ensure => installed
+        }
 }
