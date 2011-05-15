@@ -2,3 +2,8 @@ Just to keep some recipes between home and work and being able o modify them no 
 thses recipes are mostly puppet modules.
 And of course, every idea to get better use of puppet is welcome
 
+
+for information, I own 3 pcs (2 with ubuntu 10.04 and 1 with 11.04) plus 4 vms under centos 5 and 6 and debian lenny and squeeze.
+
+My goal is to write recipes for thses hosts that i could deploy on each one and get back with git
+
