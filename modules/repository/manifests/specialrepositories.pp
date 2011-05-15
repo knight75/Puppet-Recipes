@@ -1,3 +1,4 @@
+#managing special repositories
 
 class repository::specialrepositories {
             aptkey { "98AB5139":
