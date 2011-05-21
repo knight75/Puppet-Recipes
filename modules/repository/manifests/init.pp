@@ -1,7 +1,7 @@
 #thanks to puppetlabs site
 #http://projects.puppetlabs.com/projects/1/wiki/Apt_Keys_Patterns
 
-define aptkey($keyid, $ensure, $keyserver = "keyserver.ubuntu.com") {
+define aptkey($keyid, $ensure, $keyserver = "keyserver.ubuntu.com", $debiankeyserver = "http://keyring.debian.org") {
         case $ensure {
                 present: {
                         exec { "Import $keyid to apt keystore":
