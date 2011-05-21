@@ -1,4 +1,3 @@
-#managing special repositories
 
 class repository::specialrepositories {
             aptkey { "98AB5139":
@@ -9,12 +8,12 @@ class repository::specialrepositories {
             file {"/etc/apt/sources.list.d/virtualbox.list":
                  ensure => present,
                  content => template("repository/virtualbox.erb"),
-                 notify => Exec["refresh_apt"],
                  require => Aptkey[98AB5139]
             }
 
             exec {"refresh_apt":
                  command => "apt-get update",
-                 subscribe   => File["/etc/apt/sources.list.d/virtualbox.list"] 
+                 subscribe   => File["/etc/apt/sources.list.d/virtualbox.list"],
+                 refreshonly => true
             }
 }
