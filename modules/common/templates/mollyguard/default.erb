@@ -1,0 +1,21 @@
+
+
+
+				*****************************************************
+				                    CAUTION!!!!!              
+	     			                                                
+				        This Will shutdown <%=hostname%>
+				                                                
+				*****************************************************
+
+			<% if %(host-01 overhost-02).include?(hostname) -%>
+				
+				host <%=hostname%> Should NEVER be REBOOT!!!!!!!
+				We invite you to enter ctrl + c or nnn in place of hostname 
+			<% else-%>
+				if you wish to continue:
+				Please enter <%=hostname%>
+				else:
+				We invite you to enter ctrl + c or nnn in place of hostname 
+			<% end -%>
+
